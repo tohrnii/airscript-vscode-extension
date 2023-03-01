@@ -1,0 +1,62 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "AirScript",
+	"patterns": [
+		{
+		  "name": "keyword",
+		  "match": "\\b(?:let|const|first|last|for|in|sum|prod|enf)\\b"
+		},
+		{
+		  "name": "keyword.control",
+		  "match": "\\b(?:def|trace_columns|main|aux|public_inputs|periodic_columns|random_values|boundary_constraints|integrity_constraints)\\b"
+		},
+		{
+		  "name": "keyword.operator",
+		  "match": "(?:=|\\+|-|\\*|\\^)"
+		},
+		{
+		  "name": "keyword.other.random",
+		  "match": "\\$"
+		},
+		{
+		  "name": "keyword.other.next",
+		  "match": "\\'"
+		},
+		{
+		  "name": "punctuation.definition.comment",
+		  "begin": "#",
+		  "end": "$",
+		  "patterns": [
+			{
+			  "name": "comment.line.number-sign",
+			  "match": "\\b(?:TODO|FIXME|NOTE|BUG)\\b"
+			}
+		  ]
+		},
+		{
+		  "name": "constant.numeric",
+		  "match": "\\b\\d+\\b"
+		},
+		{
+		  "name": "variable.other.readwrite",
+		  "match": "\\b[a-zA-Z][a-zA-Z0-9_]*\\b"
+		},
+		{
+		  "name": "punctuation.definition.group",
+		  "match": "(?:\\(|\\))"
+		},
+		{
+		  "name": "punctuation.definition.array",
+		  "match": "(?:\\[|\\])"
+		},
+		{
+		  "name": "punctuation.separator",
+		  "match": ","
+		},
+		{
+		  "name": "punctuation.definition.range",
+		  "match": "\\.\\."
+		}
+	],
+	"scopeName": "source.air"
+}

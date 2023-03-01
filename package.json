@@ -1,0 +1,41 @@
+{
+  "name": "airscript",
+  "displayName": "airscript",
+  "description": "",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tohrnii/airscript-vscode-extension.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "airscript",
+        "aliases": [
+          "AirScript",
+          "airscript"
+        ],
+        "extensions": [
+          ".air"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "airscript",
+        "scopeName": "source.air",
+        "path": "./syntaxes/airscript.tmLanguage.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "vsce": "^2.15.0"
+  }
+}
